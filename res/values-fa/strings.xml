@@ -137,7 +137,7 @@
     <!-- Weather alerts -->
     <string name="activity_main_alert">هشدارها: %1$d</string>
 
-    <string name="daily_forcast_no_wind">همیشه</string>
+    <string name="daily_forcast_no_wind">نسیم</string>
     <string name="daily_forcast_whirl_wind">گردباد</string>
     <string name="delete">حذف</string>
 
