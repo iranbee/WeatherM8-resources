@@ -72,6 +72,7 @@
     <string name="settings_weather_realtime_spider_title">داده های واقعی</string>
     <string name="settings_weather_forecast_spider_title">داده های پیش بینی</string>
     <string name="settings_weather_station_title">ایستگاه هواشناسی</string>
+    <string name="settings_weather_data_order_title">ترتیب داده های هواشناسی</string>
     <string name="settings_aqi_title">@string/aqi_main_title</string>
     <string name="settings_aqi_onoff_title">اطلاعات کیفیت هوا</string>
     <string name="settings_aqi_onoff_summary">نمایش اطلاعات شاخص کیفیت هوا برای مکان شما. (در صورت موجود بودن)</string>
@@ -93,6 +94,7 @@
     <string name="settings_pressure_unit_mm">mmHg</string>
     <string name="settings_pressure_unit_in">inHg</string>
     <string name="settings_wind_unit">سرعت باد</string>
+    <string name="settings_wind_unit_bft">bft</string>
     <string name="settings_wind_unit_kmh">km/h</string>
     <string name="settings_wind_unit_knot">knot</string>
     <string name="settings_wind_unit_ms">m/s</string>
@@ -122,7 +124,8 @@
     <string name="settings_notification_priority_summary">ظاهر شدن حداقل اولویت اخطارها به صورت کم رنگ</string>
 
     <string name="settings_notify_type_title">آیکون اخطار</string>
-
+    <string name="settings_notification_statusbar_color_title">رنگ آیکون اخطار</string>
+	
     <string name="settings_alerts_title">مدیریت هشدار</string>
 
     <string name="settings_icons_title">آیکون های هواشناسی</string>
@@ -133,12 +136,15 @@
     <string name="settings_widgets_not_found">فاقد ابزارک های نصب شده</string>
 
     <string name="settings_ads_title">تبلیغات و کمک مالی</string>
+    <string name="settings_ads_donations_title">خرید یک نوشیدنی</string>
     <string name="settings_ads_explanation">"چرا تبلیغات می بینید؟
 نوشتن برنامه های کاربردی برای اندروید, یک سرگرمی برای من است که در وقت آزاد انجام می دهم. اما به عنوان یک منبع درآمد برای تحریک ما این تبلیغات نمایش داده می شود. پس با مشاهده این تبلیغات به ما کمک کنید."</string>
+    <string name="settings_ads_menu_hide_title">پنهان کردن این آیتم منو</string>
     <string name="settings_ads_remove_title">حذف تبلیغات</string>
     <string name="settings_ads_remove_summary">حذف تبلیغات برای یک هفته (یک بار در ماه)</string>
     <string name="settings_ads_yandex">یاندکس مانی</string>
     <string name="settings_ads_webmoney">وب مانی</string>
+    <string name="settings_ads_donation_expl">برای انجام کمک مالی از طریق Google Play , با فشار دادن دکمه های زیر, تبلیغات حذف نخواهد شد. بلکه باید از دکمه \ "حذف تبلیغات \" استفاده کنید.</string>
     <string name="settings_about">درباره</string>
     <string name="settings_translations">ترجمه نرم افزار</string>
     <string name="settings_translations_summary">امتیاز به مترجم این نرم افزار که برنامه را به زبان شما ترجمه کرده</string>
@@ -181,6 +187,7 @@
     <string name="weather_details_title">جزئیات آب و هوا</string>
     <string name="weather_details_wind_title">باد</string>
     <string name="weather_details_real_feel_title">احساس</string>
+    <string name="weather_details_temperature_title">دما</string>
     <string name="weather_details_uv_index_title">شاخص اشعه ماوراء بنفش</string>
     <string name="weather_details_pressure_title">فشار</string>
     <string name="weather_details_humidity_title">رطوبت</string>
@@ -203,18 +210,48 @@
 
     <string name="weather_details_update_date_string">زمان مشاهده: %s</string>
 
-    <string name="time_units_hour">ساعت</string>
-    <string name="time_units_minute">دقیقه</string>
-    <string name="time_units_second">ثانیه</string>
+    <string name="weather_details_daylight_diff_longer">%1$s طولانی تر</string>
+    <string name="weather_details_daylight_diff_shorter">%1$s کوتاهتر</string>
+
+    <string name="weather_details_precipitation_amount_mm">%1$s mm</string>
+
+    <string name="time_units_hour">" ساعت"</string>
+    <string name="time_units_minute">" دقیقه"</string>
+    <string name="time_units_second">" ثانیه"</string>
+
+    <string name="hourly_forecast_detail_date">d MMM, E</string>
+    <string name="daily_forecast_detail_date">d MMM</string>
+    <string name="weather_update_date">d MMMM</string>
+    <string name="weather_short_month_update_date">d MMM</string>
+    <string name="widget_dateformat_default_value">d MMMM yyyy</string>
 
     <!-- Weather alerts -->
-    <string name="activity_main_alert">هشدارها: %1$d</string>
+    <string name="activity_main_alert">هشدارها: %1$s</string>
+    <string name="activity_main_alert_precip">%1$s احتمال دارد. میزان بارش در روز %2$s.</string>
+    <string name="activity_main_alert_wind">احتمال وزش باد, حداکثر سرعت باد تا %1$s.</string>
+    <string name="activity_main_alert_wind_gusts">احتمال وزش باد شدید می رود با حداکثر سرعت تا %1$s.</string>
+    <string name="activity_main_alert_tstorm">انتظار رعد و برق وجود دارد با احتمال %1$s.</string>
+    <string name="activity_main_alert_day_night">احتمال در روز %1$s ور در شب %2$s.</string>
+    <string name="activity_main_alert_type_rain">باران</string>
+    <string name="activity_main_alert_type_snow">برف</string>
+    <string name="activity_main_alert_type_ice">یخبندان</string>
+    <string name="activity_main_alert_type_wind">باد</string>
+    <string name="activity_main_alert_type_wind_gusts">باد شدید</string>
+    <string name="activity_main_alert_type_tstorm">رعد و برق</string>
+    <string name="activity_main_alert_unit_mm">" mm"</string>
+    <string name="activity_main_alert_unit_cm">" cm"</string>
+    <string name="activity_main_alert_unit_inch">" in"</string>
+    <string name="activity_main_alert_unit_kmh">" km/h"</string>
+    <string name="activity_main_alert_unit_mph">" mph"</string>
+    <string name="activity_main_alert_unit_mps">" m/s"</string>
+
 
     <string name="daily_forcast_no_wind">جاری</string>
     <string name="daily_forcast_whirl_wind">گردباد</string>
     <string name="delete">حذف</string>
 
     <string name="wind_unit">%1$s km/h</string>
+    <string name="wind_unit_bft">%1$s bft</string>
     <string name="wind_unit_knot">%1$sknot</string>
     <string name="wind_unit_ms">%1$s m/s</string>
     <string name="wind_unit_mph">%1$s mph</string>
@@ -235,16 +272,21 @@
     <string name="widget_config_dateformat_title">فرمت تاریخ</string>
     <string name="widget_config_realtime_font_title">فونت داده بهنگام</string>
     <string name="widget_config_realtime_font_size_title">اندازه متن داده های بهنگام</string>
+	<string name="widget_config_realtime_icon_size_title">اندازه آیکون آب و هوای فعلی</string>
+    <string name="widget_config_forecast_icon_size_title">اندازه آیکون آب و هوای پیش بینی شده</string>
     <string name="widget_config_font_title">فونت متن</string>
     <string name="widget_config_font_size_title">اندازه متن</string>
     <string name="widget_config_text_color_title">رنگ متن</string>
     <string name="widget_config_show_alarm_title">نمایش هشدار بعدی</string>
+    <string name="widget_config_show_date_title">نمایش زمان</string>
     <string name="widget_config_use_background_title">نمایش پس زمینه ابزارک</string>
     <string name="widget_config_background_color_title">رنگ پس زمینه</string>
     <string name="widget_config_background_type_title">نوع پس زمینه</string>
     <string name="widget_config_background_type_solid">تو پر</string>
     <string name="widget_config_background_type_border">حاشیه دار</string>
 
+    <string name="widget_config_show_text_shadow_title">نمایش سایه متن</string>
+    <string name="widget_config_show_realtime_icon_title">نمایش نماد آب و هوای فعلی</string>
     <string name="widget_config_show_cityname_title">نمایش نام شهر</string>
     <string name="widget_config_show_local_time_title">نمایش زمان محلی</string>
     <string name="widget_config_show_leading_zero_title">نمایش صفر پیشین</string>
@@ -324,4 +366,12 @@
 
     <string name="aqi_detail_unit">واحد: µg/m³ (CO: mg/m³)</string>
     <string name="aqi_data_source">%s</string>
+
+    <!-- Radar -->
+    <string name="radar_title">رادار</string>
+    <string name="radar_tab_cloud">ابری</string>
+    <string name="radar_tab_rain">باران</string>
+    <string name="radar_date_format">dd/MM HH:mm</string>
+
+    <string name="loading_data">بارگیری داده ها ...</string>
 </resources>
